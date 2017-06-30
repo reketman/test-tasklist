@@ -1,0 +1,11 @@
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\bin\Debug\test.tasklist.data.dll.config
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\bin\Debug\test.tasklist.data.dll
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\bin\Debug\test.tasklist.data.pdb
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\bin\Debug\EntityFramework.dll
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\bin\Debug\EntityFramework.xml
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\obj\Debug\test.tasklist.data.csprojResolveAssemblyReference.cache
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\obj\Debug\test.tasklist.data.dll
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\obj\Debug\test.tasklist.data.pdb

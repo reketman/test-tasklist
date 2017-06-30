@@ -1,0 +1,10 @@
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\bin\Release\test.tasklist.data.dll.config
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\bin\Release\test.tasklist.data.dll
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\bin\Release\test.tasklist.data.pdb
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\bin\Release\EntityFramework.dll
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\bin\Release\EntityFramework.xml
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\bin\Release\ru\EntityFramework.resources.dll
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\obj\Release\test.tasklist.data.dll
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.data\obj\Release\test.tasklist.data.pdb
