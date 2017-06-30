@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
@@ -13,39 +12,18 @@ namespace test.tasklist.WI.Controllers
     public class TaskController : ApiController
     {
         private Repository db = new Repository();
-
+        [HttpGet]
         public IQueryable<C_task> GetTask()
-        {
-            return db.C_task;
-        }
-
-        [ResponseType(typeof(C_task))]
-        public async Task<IHttpActionResult> GetTask(Guid id)
-        {
-            C_task Task = await db.C_task.FindAsync(id);
-            if (Task == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(Task);
+        {            
+            return db.C_task.OrderBy(a=>a.Created);
         }
 
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutTask(Guid id, C_task Task)
+        public async Task<IHttpActionResult> PutTask(Guid id)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != Task.ID)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(Task).State = EntityState.Modified;
-
+            var Task = db.C_task.First(a => a.ID == id);
+            Task.Finished = DateTime.Now;
+            Task.IsCompleted = true;
             try
             {
                 await db.SaveChangesAsync();
@@ -66,15 +44,12 @@ namespace test.tasklist.WI.Controllers
         }
 
         [ResponseType(typeof(C_task))]
+        [HttpPost]
         public async Task<IHttpActionResult> PostTask(C_task Task)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
+            Task.Created = DateTime.Now;
+            if (Task.Description == null) Task.Description = "";
             db.C_task.Add(Task);
-
             try
             {
                 await db.SaveChangesAsync();
@@ -92,21 +67,6 @@ namespace test.tasklist.WI.Controllers
             }
 
             return CreatedAtRoute("DefaultApi", new { id = Task.ID }, Task);
-        }
-
-        [ResponseType(typeof(C_task))]
-        public async Task<IHttpActionResult> DeleteTask(Guid id)
-        {
-            C_task Task = await db.C_task.FindAsync(id);
-            if (Task == null)
-            {
-                return NotFound();
-            }
-
-            db.C_task.Remove(Task);
-            await db.SaveChangesAsync();
-
-            return Ok(Task);
         }
 
         protected override void Dispose(bool disposing)

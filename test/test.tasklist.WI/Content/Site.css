@@ -1,12 +1,6 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -20,5 +14,28 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: none !important;
+}
+
+textarea {
+    resize: none;
+    width: 100% !important;
+    height: 60px !important;
+}
+
+.k-grid-norecords {
+    height: 99% !important;
+}
+
+.fieldset {
+    margin: 10px 0px;
+}
+
+    .fieldset label {
+        text-align: right;
+        padding-top: 7px;
+    }
+
+.k-checkbox-label, .k-radio-label {
+    padding: 0px !important;
 }

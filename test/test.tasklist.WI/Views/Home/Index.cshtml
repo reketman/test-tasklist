@@ -1,31 +1,33 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@{ 
+    var uid = Guid.NewGuid().ToString();
 }
+<div id="taskmodule">
+    <button class="k-button" role="button" data-bind="events:{ click:OnBtnAddClick }"><span class="glyphicon glyphicon-plus"></span> Добавить задачу</button><br/><br />
+    <div id="taskgrid" style="width:100%">
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    </div>
+    <script id="wnd-add" type="text/x-kendo-template">
+        <div class="fieldset row">
+            <label class="col-lg-3 col-md-3 col-sm-3" for="elem-1-@uid">Название:</label>
+            <div class="col-lg-7 col-md-7 col-sm-7">
+                <input class="k-input k-textbox" id="elem-1-@uid" data-bind="value:data.Title" style="width:100%;" maxlength="160" />
+            </div>
+        </div>
+        <div class="fieldset row">
+            <label class="col-lg-3 col-md-3 col-sm-3" for="elem-2-@uid">Описание:</label>
+            <div class="col-lg-7 col-md-7 col-sm-7">
+                <textarea class="k-input k-textbox" id="elem-2-@uid" data-bind="value:data.Description"></textarea>
+            </div>
+        </div>
+        <div class="buttons" style="text-align:right;">
+            <button class="k-button" data-bind="events:{ click:OnBtnSave }">Сохранить</button>
+            <button class="k-button" data-bind="events:{ click:OnBtnCancel }">Отмена</button>
+        </div>
+    </script>
 </div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+<script>
+    $(function () {
+        var Module = new TaskList({ $elem: $("#taskmodule") });
+        Module.Activate();
+    });
+</script>

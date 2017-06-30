@@ -102,3 +102,9 @@ C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.WI\bin\ru\System.We
 C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.WI\obj\Debug\test.tasklist.WI.csprojResolveAssemblyReference.cache
 C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.WI\obj\Debug\test.tasklist.WI.dll
 C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.WI\obj\Debug\test.tasklist.WI.pdb
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.WI\bin\System.Net.Http.Formatting.dll
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.WI\bin\System.Web.Http.dll
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.WI\bin\System.Web.Http.WebHost.dll
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.WI\bin\System.Net.Http.Formatting.xml
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.WI\bin\System.Web.Http.xml
+C:\Users\reket\Source\Repos\test-tasklist\test\test.tasklist.WI\bin\System.Web.Http.WebHost.xml
